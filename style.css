@@ -122,6 +122,7 @@ text-align: left;
   margin:  1rem 0;
   position: relative;
   left: 5rem;
+  top: 80px;
   width: 400px;
   max-width: calc(100% + 4rem);
   object-fit: cover;
@@ -132,6 +133,8 @@ text-align: left;
 }
 .menu-item p {
   margin:  0 0 2rem;
+  position: absolute;
+  top: 100px;
 }
 .menu-item .box1{
   position: absolute;
@@ -150,7 +153,7 @@ text-align: left;
   color: white;
 }
 #works {
-  padding: 80px 0;
+  padding: 90px 0;
   position: relative;
   overflow: hidden;
   display: flex;
@@ -285,7 +288,7 @@ text-align: left;
 	padding-top:		80px;	/* ãƒ›ãƒãƒ¼ã§ä¸‹ã«ãšã‚‰ã™ */
 }
 .kara{
-  padding: 30px;
+  padding: 250px;
 }
 #footer{
   text-align:center;

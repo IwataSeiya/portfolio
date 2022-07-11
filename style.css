@@ -132,7 +132,7 @@ text-align: left;
   border-radius: 10%;
 }
 .menu-item p {
-  margin:  0 0 2rem;
+  margin:  50px 0 0 4rem;
   position: absolute;
   top: 100px;
 }
@@ -147,9 +147,9 @@ text-align: left;
 .menu-item .texts{
   display: block;
   width: 100%;
-  font-size: 2rem;
+  font-size: 2.7rem;
   width: 480px;
-  padding: 4rem;
+  padding: 0rem;
   color: white;
 }
 #works {

@@ -1,30 +1,45 @@
-$.scrollify({
-    section : ".box",//1ページスクロールさせたいエリアクラス名
-    scrollbars:"false",//スクロールバー表示・非表示設定
-    interstitialSection : "#header,#footer",//ヘッダーフッターを認識し、1ページスクロールさせず表示されるように設定
-    easing: "swing", // 他にもlinearやeaseOutExpoといったjQueryのeasing指定可能
-      scrollSpeed: 300, // スクロール時の速度
-    
-    //以下、ページネーション設定
-    before:function(i,panels) {
-      var ref = panels[i].attr("data-section-name");
-        $(".pagination .active").removeClass("active");
-        $(".pagination").find("a[href=\"#" + ref + "\"]").addClass("active");
-      },
-      afterRender:function() {
-        var pagination = "<ul class=\"pagination\">";
-        var activeClass = "";
-        $(".box").each(function(i) {//1ページスクロールさせたいエリアクラス名を指定
-          activeClass = "";
-          if(i===$.scrollify.currentIndex()) {
-            activeClass = "active";
-          }
-          pagination += "<li><a class=\"" + activeClass + "\" href=\"#" + $(this).attr("data-section-name") + "\"><span class=\"hover-text\">" + $(this).attr("data-section-name").charAt(0).toUpperCase() + $(this).attr("data-section-name").slice(1) + "</span></a></li>";
-        });
-        pagination += "</ul>";
-  
-        $("#box1").append(pagination);//はじめのエリアにページネーションを表示
-        $(".pagination a").on("click",$.scrollify.move);
-      }
-  
-    });
+const image01src = 'url("img/image01.jpg")';
+const image02src = 'url("img/image02.jpg")';
+const image03src = 'url("img/image03.jpg")';
+const header = document.getElementById('top');
+
+// 次の画像を指定する関数
+function nextImage() {
+  const nowBg = header.style.backgroundImage;
+  console.log(nowBg);
+
+  if (nowBg == image01src) {
+    // 今1枚め
+    header.style.backgroundImage = image02src;
+  } else if (nowBg == image02src) {
+    // 今2枚め
+    header.style.backgroundImage = image03src;
+  } else {
+    // 今3枚め
+    header.style.backgroundImage = image01src;
+  }
+}
+
+// 前の画像を指定する関数
+function prevImage() {
+  const nowBg = header.style.backgroundImage;
+  console.log(nowBg);
+
+  if (nowBg == image01src) {
+    // 今1枚め
+    header.style.backgroundImage = image03src;
+  } else if (nowBg == image02src) {
+    // 今2枚め
+    header.style.backgroundImage = image01src;
+  } else {
+    // 今3枚め
+    header.style.backgroundImage = image02src;
+  }
+}
+
+// ページが表示されたタイミングで実行したい処理を書く
+document.getElementById('top').style.backgroundImage = image01src;
+document.getElementById('sc-to-left').addEventListener('click', prevImage);
+document.getElementById('sc-to-right').addEventListener('click', nextImage);
+// タイマーセット(5秒ごとに次の画像)
+setInterval(nextImage, 5000);

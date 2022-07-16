@@ -1,26 +1,38 @@
 <!DOCTYPE html>
-<html lang="ja" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>第9回 課題3</title>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
     <link rel="stylesheet" href="style1.css">
-    <script src="02.js" defer></script>
-  </head>
-  <body>
-    <header id="top">
-      <img src="img/image01.jpg" alt="" width="100px" height="80px">
-      <nav>
-        <ul>
-          <li><a href="#top">Top</a></li>
-        </ul>
-      </nav>
+    <script src="01.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+              <li><a href="#top">Top</a></li>
+            </ul>
+          </nav> 
     </header>
-      <nav class="slider-controller">
-        <ul>
-          <li><a id="sc-to-left">←</a></li>
-          <li><a id="sc-to-right">→</a></li>
-        </ul>
-      </nav>
-  </body>
+    
+    <section id="works">
+      <h2 class="works-title">Works</h2>
+      <p class="works-sub">制作したもの</p>
+      <ul class="slider">
+          <li><img src="img/image03.jpg" alt=""></li>
+          <li><img src="img/image03.jpg" alt=""></li>
+          <li><img src="img/image03.jpg" alt=""></li>
+          <li><img src="img/image03.jpg" alt=""></li>
+          <li><img src="img/image03.jpg" alt=""></li>
+          <!--/slider-->
+      </ul>
+      <div class="works-view-more">
+          <a href="works.html"><button class="works-btn">view more</button></a>
+      </div>
+  </section>
+  <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  
+</body>
 </html>

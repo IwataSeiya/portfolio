@@ -5,116 +5,130 @@
   box-sizing: inherit;
 }
 body {
-  padding: 0;
-  margin: auto;
-  font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro",Osaka, "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
-  font-size: 14pt;
-}
-header {
-  position: fixed;
-  width: 90%;
-  top: 0;
-  left: 0;
-  z-index: 9999; /*重なりを調整*/
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  background-color: var(--base-bg);
-  margin: auto auto;
-}
-header h1 {
-  text-align: center;
-  position: relative;
-}
-header h1::after {
-  content: "";
-  width: 50%;
-  height: 1px;
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  background: var(--text-color);
-}
-header h1 img {
-  max-width: 100%;
-}
-header ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 16px;
-  margin-top: 16px;
-}
-header ul li a {
-  display: inline-block;
-  font-size: 1rem;
-  padding: 0.5rem 1.5rem;
-  color: var(--light-100);
-  text-decoration: none;
-  transition: all 0.3s;
-}
-header ul li a:hover,
-header ul li a:active {
-  color: var(--light-100);
-  background-color: var(--primary-050);
-}
-
-#top {
-  padding: 0;
   margin: 0;
-  min-height: 100vh;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #eee;
-  background-size: cover;
-  background-position: center center;
+  background-color: #fff;
+  height: auto;
+}
+img {
+    vertical-align: bottom;
+    width: 100%;
+    height: auto;
 }
 
-
-.slider-controller {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
 
-.slider-controller ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  display: flex;
-  justify-content: space-between;
-}
-.slider-controller ul a{
-  padding-top:10em;
-}
-#sc-to-left,
-#sc-to-right {
-  display: inline-block;
-  font-size: 2rem;
-  width: 60px;
-  height: 705px;
-  line-height: 3em;
-  background-color: gold;
-  color: #ffffff;
-  text-decoration: none;
-  cursor: pointer;
-  text-align: center;
-  opacity: 0.75;
-}
-
-section[role="main"]>article,
-section[role="main"]>aside {
-  width: 960px;
-  max-width: 95vw;
+/* -----スライドショー----- */
+.slider {
+  /*横幅94%で左右に余白を持たせて中央寄せ*/
+  width: 94%;
   margin: 0 auto;
 }
 
-section[role="main"] {
-  padding-top: 120px;
-  padding-bottom: 120px;
+.slider img {
+  width: 60vw;
+  /*スライダー内の画像を60vwにしてレスポンシブ化*/
+  height: auto;
 }
+
+.slider .slick-slide {
+  transform: scale(0.8);
+  /*左右の画像のサイズを80%に*/
+  transition: all .5s;
+  /*拡大や透過のアニメーションを0.5秒で行う*/
+  opacity: 0.5;
+  /*透過50%*/
+}
+
+.slider .slick-slide.slick-center {
+  transform: scale(1);
+  /*中央の画像のサイズだけ等倍に*/
+  opacity: 1;
+  /*透過なし*/
+}
+
+/*矢印の設定*/
+
+/*戻る、次へ矢印の位置*/
+.slick-prev,
+.slick-next {
+  position: absolute;
+  /*絶対配置にする*/
+  top: 42%;
+  cursor: pointer;
+  /*マウスカーソルを指マークに*/
+  outline: none;
+  /*クリックをしたら出てくる枠線を消す*/
+  border-top: 2px solid #666;
+  /*矢印の色*/
+  border-right: 2px solid #666;
+  /*矢印の色*/
+  height: 15px;
+  width: 15px;
+}
+
+.slick-prev {
+  /*戻る矢印の位置と形状*/
+  left: -1.5%;
+  transform: rotate(-135deg);
+}
+
+.slick-next {
+  /*次へ矢印の位置と形状*/
+  right: -1.5%;
+  transform: rotate(45deg);
+}
+
+/*ドットナビゲーションの設定*/
+
+.slick-dots {
+  text-align: center;
+  margin: 20px 0 0 0;
+}
+
+.slick-dots li {
+  display: inline-block;
+  margin: 0 5px;
+}
+
+.slick-dots button {
+  color: transparent;
+  outline: none;
+  width: 8px;
+  /*ドットボタンのサイズ*/
+  height: 8px;
+  /*ドットボタンのサイズ*/
+  display: block;
+  border-radius: 50%;
+  background: #ccc;
+  /*ドットボタンの色*/
+}
+
+.slick-dots .slick-active button {
+  background: #333;
+  /*ドットボタンの現在地表示の色*/
+}
+
+/* -----スライドショー ボタン----- */
+.works-view-more {
+  text-align: center;
+  padding: 80px;
+}
+
+.works-btn {
+  padding: 10px 40px;
+  border: 1px solid #000;
+  border-radius: 0;
+  background: #fff;
+  letter-spacing: 1.5px;
+  font-family: 'Unna', serif;
+}
+
+.works-btn:hover {
+  color: #fff;
+  background: #000;
+}
+

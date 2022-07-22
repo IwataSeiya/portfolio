@@ -1,45 +1,97 @@
-const image01src = 'url("img/image01.jpg")';
-const image02src = 'url("img/image02.jpg")';
-const image03src = 'url("img/image03.jpg")';
-const header = document.getElementById('top');
+const bar = new ProgressBar.Line(load_text, {
+  easing: 'easeInOut',
+  duration: 2000,
+  strokeWidth: 0.2,
+  color: '#FF0',
+  trailWidth: 0.2,
+  trailColor: '#FFF',
+  text: {
+      style: {
+          position: 'absolute',
+          left: '50%',
+          top: '50%',
+          padding: '0',
+          margin: '-30px 0 0 0',
+          transform: 'translate(-50%,-50%)',
+          'font-size': '3rem',
+          color: '#FFF',
+      },
+      autoStyleContainer: false 
+  },
+  step: function (state, bar) {
+      bar.setText(Math.round(bar.value() * 100) + ' %'); 
+  }
+});
 
-// 次の画像を指定する関数
+bar.animate(1.0, function () {
+$("#load").delay(500).fadeOut(800);
+});
+
+const image01src = 'url("img/image03.jpg")';
+const image02src = 'url("img/image07.jpg")';
+const image03src = 'url("img/image06.jpg")';
+const head = document.getElementById('top');
+
+
 function nextImage() {
-  const nowBg = header.style.backgroundImage;
+  const nowBg = head.style.backgroundImage;
   console.log(nowBg);
 
   if (nowBg == image01src) {
-    // 今1枚め
-    header.style.backgroundImage = image02src;
+
+    head.style.backgroundImage = image02src;
   } else if (nowBg == image02src) {
-    // 今2枚め
-    header.style.backgroundImage = image03src;
+
+    head.style.backgroundImage = image03src;
   } else {
-    // 今3枚め
-    header.style.backgroundImage = image01src;
+
+    head.style.backgroundImage = image01src;
   }
 }
 
-// 前の画像を指定する関数
+
 function prevImage() {
-  const nowBg = header.style.backgroundImage;
+  const nowBg = head.style.backgroundImage;
   console.log(nowBg);
 
   if (nowBg == image01src) {
-    // 今1枚め
-    header.style.backgroundImage = image03src;
+
+    head.style.backgroundImage = image03src;
   } else if (nowBg == image02src) {
-    // 今2枚め
-    header.style.backgroundImage = image01src;
+
+    head.style.backgroundImage = image01src;
   } else {
-    // 今3枚め
-    header.style.backgroundImage = image02src;
+
+    head.style.backgroundImage = image02src;
   }
 }
 
-// ページが表示されたタイミングで実行したい処理を書く
 document.getElementById('top').style.backgroundImage = image01src;
 document.getElementById('sc-to-left').addEventListener('click', prevImage);
 document.getElementById('sc-to-right').addEventListener('click', nextImage);
-// タイマーセット(5秒ごとに次の画像)
 setInterval(nextImage, 5000);
+
+
+window.addEventListener("load", function() {
+  const target = document.querySelectorAll('.scr-target')
+  const targetArray = Array.prototype.slice.call(target);
+  const options = {
+      root: null,
+      rootMargin: '0px 0px',
+      threshold: 0.2
+  };
+  
+  const observer = new IntersectionObserver(callback, options)
+  targetArray.forEach(function (tgt) {
+    observer.observe(tgt)
+  });
+  
+  function callback(entries) {
+    entries.forEach(function(entry) {
+      const target = entry.target;
+      if (entry.isIntersecting && !target.classList.contains('is-active')) {
+        target.classList.add('is-active');
+      }
+    });
+  };
+  });

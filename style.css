@@ -7,11 +7,9 @@
   box-sizing: inherit;
 }
 html {
-  /* ã‚¹ãƒ ãƒ¼ã‚¹ã‚¹ã‚¯ãƒ­ãƒ¼ãƒ«ç”¨ */
   scroll-behavior: smooth;
 }
 #load {
-  /*fixedで全面に固定*/
   position: fixed;
   z-index: 999;
   width: 100%;
@@ -21,7 +19,7 @@ html {
   color: #fff;
 }
 
-/* Loadingバー中央配置　*/
+
 #load_text {
   position: absolute;
   top: 50%;
@@ -37,7 +35,7 @@ header {
   width: 100%;
   top: 0;
   left: 0;
-  z-index: 99; /*é‡ãªã‚Šã‚’èª¿æ•´*/
+  z-index: 99; 
   display: flex;
   justify-content: center;
   flex-direction: row;
@@ -95,7 +93,7 @@ body{
   min-height: 95vh;
 position: relative;
 color: #fff;
-background-color:#020E34;/*èƒŒæ™¯è‰²*/
+background-color:#020E34;
 width:100%;
 height: 100%;
 background-size: cover;
@@ -110,6 +108,7 @@ text-align: left;
   letter-spacing: 0.1rem;
   top: 320px;
   z-index: 100;
+  font-family: 'Times New Roman', Times, serif;
 }
 .scr-target {
   opacity: 0;
@@ -142,7 +141,7 @@ margin: 0 auto;
 .menu-item img {
 margin:  1rem 0;
 position: relative;
-left: 5rem;
+left: 10rem;
 top: 80px;
 width: 400px;
 max-width: calc(100% + 4rem);
@@ -166,11 +165,13 @@ height: 400px;
 width: 600px;
 }
 .menu-item .texts{
+  position: absolute;
 display: block;
 width: 100%;
-font-size: 2rem;
+font-size: 1.8rem;
+top: 70px;
 width: 480px;
-padding-top: 2rem;
+padding-bottom: 1rem;
 letter-spacing: 10px;
 line-height: 1.5em;
 color: white;
@@ -190,12 +191,7 @@ margin-bottom: 100px;
 text-decoration: underline gold;
 background-color: black;
 }
-.work1{
-display: flex;
-flex-direction: row;
-position: relative;
 
-}
 .work1 h3{
 position: absolute;
 top: -30px;
@@ -217,6 +213,12 @@ position: absolute;
 top: -30px;
 left: 1020px;
 }
+.work1{
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  
+  }
 .work1 img{
 width:			440px;
 height:			388px;
@@ -230,21 +232,30 @@ padding-top: 2em;
 padding-left: 1.6em;
 color:			#fff;
 }
+.work1 a{
+  text-decoration: none;
+}
+.work2 a{
+  text-decoration: none;
+}
+.work3 a{
+  text-decoration: none;
+}
 .work1 .mask{
 position:		absolute;
 top:			10px;
 left:			16px;
 width: 30.9%;
 height: 388px;
-opacity:		0;	/* ãƒžã‚¹ã‚¯ã‚’è¡¨ç¤ºã—ãªã„ */
+opacity:		0;	
 background-color:	rgba(0,0,0,0.4);
 -webkit-transition:	all 0.6s ease;
 transition:		all 0.6s ease;
 z-index: 1000;
 }
 .work1:hover .mask {
-opacity:		1;	/* ãƒžã‚¹ã‚¯ã‚’è¡¨ç¤ºã™ã‚‹ */
-padding-top:		80px;	/* ãƒ›ãƒãƒ¼ã§ä¸‹ã«ãšã‚‰ã™ */
+opacity:		1;	
+padding-top:		80px;	
 }
 
 .work2 img{
@@ -268,15 +279,15 @@ top:			10px;
 left:			510px;
 width: 31%;
 height: 388px;
-opacity:		0;	/* ãƒžã‚¹ã‚¯ã‚’è¡¨ç¤ºã—ãªã„ */
+opacity:		0;	
 background-color:	rgba(0,0,0,0.4);
 -webkit-transition:	all 0.6s ease;
 transition:		all 0.6s ease;
 z-index: 1000;
 }
 .work2:hover .mask1 {
-opacity:		1;	/* ãƒžã‚¹ã‚¯ã‚’è¡¨ç¤ºã™ã‚‹ */
-padding-top:		80px;	/* ãƒ›ãƒãƒ¼ã§ä¸‹ã«ãšã‚‰ã™ */
+opacity:		1;	
+padding-top:		80px;	
 }
 .work3 img{
 position: absolute;
@@ -300,25 +311,56 @@ top:			10px;
 left:			1006px;
 width: 28%;
 height: 388px;
-opacity:		0;	/* ãƒžã‚¹ã‚¯ã‚’è¡¨ç¤ºã—ãªã„ */
+opacity:		0;
 background-color:	rgba(0,0,0,0.4);
 -webkit-transition:	all 0.6s ease;
 transition:		all 0.6s ease;
 z-index: 1000;
 }
 .work3:hover .mask2 {
-opacity:		1;	/* ãƒžã‚¹ã‚¯ã‚’è¡¨ç¤ºã™ã‚‹ */
-padding-top:		80px;	/* ãƒ›ãƒãƒ¼ã§ä¸‹ã«ãšã‚‰ã™ */
+opacity:		1;	
+padding-top:		80px;	
 }
 .kara{
 padding: 250px;
 }
 #footer{
-text-align:center;
-background-color: #fff;
-color: black;
-padding: 3em;
-}
+  position: relative;
+  text-align:center;
+  background-color: #fff;
+  color: black;
+  padding: 3em;
+  }
+  #footer .gazo1 img {
+    position: absolute;
+    width: 3%;
+    top: 35px;
+    left: 33em;
+    transition: 0.3s;
+  }
+  #footer .gazo2 img {
+    position: absolute;
+    width: 3%;
+    top: 35px;
+    left: 37em;
+    transition: 0.3s;
+  }
+  #footer img:hover{
+    width: 3.5%;
+  }
+
+  #footer  .mail{
+    position: absolute;
+    right: 38em;
+  }
+  #footer  .mail a{
+    text-decoration: none;
+    color: black;
+  }
+  #footer  .mail a:hover{
+    color: red;
+  }
+  
 .pagination {
 position:fixed;
 right:20px;
@@ -342,7 +384,6 @@ padding:4px;
 box-shadow:inset 0 0 0 5px;
 }
 
-/*ç¾åœ¨åœ°è¡¨ç¤ºã®ãƒ†ã‚­ã‚¹ãƒˆã®è¨­å®š*/
 .pagination a .hover-text {
 position:absolute;
 right:15px;
@@ -406,36 +447,36 @@ transform-origin: left top;
 
 @keyframes updown-anim{
   0%{
-    transform: translateY(110%); /*表示範囲外から*/
+    transform: translateY(110%); 
   }
   10%{
-    transform: translateY(0); /*通常の位置へ*/
+    transform: translateY(0); 
   }
   50%{
-    transform: translateY(0); /*文字が上に揃うまで待機*/
+    transform: translateY(0); 
   }
   60%{
-    transform: translateY(110%); /*下がる*/
+    transform: translateY(110%); 
   }
   100%{
-    transform: translateY(110%); /*待機*/
+    transform: translateY(110%);
   }
 }
 
-/*** アニメーションする要素の親 ***/
+
 .hero-text{
-  display: flex; /*　横並びに */
-  overflow: hidden; /* はみ出たものを非表示に */
+  display: flex;
+  overflow: hidden; 
 }
 
-/*** アニメーションを適用する要素 ***/
+
 .hero-text span {
-  transform: translateY(110%); /*デフォルトで下に隠す*/
-  display: block; /*ブロック要素に*/
-  animation: 3.5s updown-anim linear infinite; /* アニメーション */
+  transform: translateY(110%); 
+  display: block; 
+  animation: 3.5s updown-anim linear infinite; 
 }
 
-/*** 各span(文字)に遅延時間delayを設定 ***/
+
 .hero-text span:nth-child(1) {
   animation-delay: 0s;
 }
@@ -485,8 +526,6 @@ transform-origin: left top;
   animation-delay: 0.75s;
 }
 
-
-/*** 装飾用 ***/
 .hero-text{
   font-weight: bold;
   font-size: 2rem;

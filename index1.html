@@ -1,38 +1,138 @@
 <!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+<html lang="ja" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>portfolio</title>
     <link rel="stylesheet" href="style1.css">
-    <script src="01.js" defer></script>
-</head>
-<body>
-    <header>
-        <nav>
-            <ul>
-              <li><a href="#top">Top</a></li>
-            </ul>
-          </nav> 
-    </header>
-    
-    <section id="works">
-      <h2 class="works-title">Works</h2>
-      <p class="works-sub">制作したもの</p>
-      <ul class="slider">
-          <li><img src="img/image03.jpg" alt=""></li>
-          <li><img src="img/image03.jpg" alt=""></li>
-          <li><img src="img/image03.jpg" alt=""></li>
-          <li><img src="img/image03.jpg" alt=""></li>
-          <li><img src="img/image03.jpg" alt=""></li>
-          <!--/slider-->
-      </ul>
-      <div class="works-view-more">
-          <a href="works.html"><button class="works-btn">view more</button></a>
+    <script src="02.js" defer></script>
+  </head>
+  <body>
+    <div id="load">
+      <div id="load_text">
       </div>
-  </section>
-  <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-  
-</body>
+  </div>
+<header>
+  <img src="img/image01.jpg" alt="" width="100px" height="80px">
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="work">
+<h2>MAYA WORKs</h2>
+  </div>
+    <div id="top">
+      <nav class="slider-controller">
+        <ul>
+          <li><a id="sc-to-left">←</a></li>
+          <li><a id="sc-to-right">→</a></li>
+        </ul>
+      </nav>
+    </div>
+    <section role="main">
+      
+    </section>
+    <div class="scr-target">
+    <section id="works1" class="box">
+      <h2>WORK1</h2>
+      <div class="work1">
+        <a href="img/image03.jpg" data-lightbox="group"><img src="img/image03.jpg" alt="" width="300"></a>
+        <h3>01</h3>
+        <div class="cat">
+          <hr>
+      </div>
+      <div class="tit">
+        <p>~クレーンゲーム~</p>
+      </div>
+      <div class="gai">
+        <p>概要:MAYAを使い、クレーンゲームを制作しました。</p>
+      </div>
+      <div class="time">
+        <p>制作期間:３時間</p>
+      </div>
+      <div class="kan">
+        <p>感想:初めてMAYAを使って制作した作品でまだ慣れていな<br>かったので、腕を左右対称に動かすのに苦労しました。</p>
+      </div>
+      </div>
+    </div>
+    </section>
+    <div class="kara"></div>
+    <div class="scr-target">
+    <section id="works2" class="box">
+      <h2>WORK2</h2>
+      <div class="work2">
+        <a href="img/image07.jpg" data-lightbox="group"><img src="img/image07.jpg" alt=""></a>
+        <h3>02</h3>
+        <div class="cat">
+          <hr>
+      </div>
+      <div class="tit1">
+        <p>~オリジナルキャラクター~</p>
+      </div>
+      <div class="gai1">
+        <p>概要:MAYAを使い、マスコットキャラクターを制作しま<br>した。</p>
+      </div>
+      <div class="time1">
+        <p>制作期間:15時間</p>
+      </div>
+      <div class="kan1">
+        <p>感想:マスコットキャラクターの服をふわっとさせて、工<br>夫しました。ポーズを上手くとらせるのに苦労しました。</p>
+      </div>
+    </div>
+  </div>
+    </section>
+    <div class="kara"></div>
+    <div class="scr-target">
+    <section id="works3" class="box">
+      <h2>WORK3</h2>
+      <div class="work3">
+        <a href="img/image06.jpg" data-lightbox="group"><img src="img/image06.jpg" alt=""></a>
+        <h3>03</h3>
+        <div class="cat">
+          <hr>
+      </div>
+      <div class="tit2">
+        <p>~熱帯魚~</p>
+      </div>
+      <div class="gai2">
+        <p>概要:MAYAを使い、熱帯魚を制作しました。</p>
+      </div>
+      <div class="time2">
+        <p>制作期間:21時間</p>
+      </div>
+      <div class="kan2">
+        <p>感想:動かす時に形が崩れないようにするのが苦労しまし<br>た。熱帯魚をどのように動かすか考えるのが楽しかった<br>です。</p>
+      </div>
+    </div>
+  </div>
+    </section>
+    <div class="kara"></div>
+    
+    <a href="#" id="page-top">Top</a>
+
+    <footer id="footer" class="box">
+      <div class="gazo1">
+        <a href="https://www.instagram.com/seiya_612/" target="_blank"><img src="img/image1.jpg" alt=""></a>
+    </div>
+    <div class="gazo2">
+      <a href="https://twitter.com/@iwa39629668" target="_blank"><img src="img/image2.jpg" alt=""></a>
+    </div>
+      <div class="mail">
+  <a href="mailto:x21016xx@aitech.ac.jp" target="_blank">x21016xx@aitech.ac.jp</a>
+</div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="https://rawgit.com/kimmobrunfeldt/progressbar.js/master/dist/progressbar.min.js"></script>
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=IntersectionObserver"></script>
+
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/css/lightbox.css" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/js/lightbox.min.js" type="text/javascript"></script>
+  </body>
 </html>
